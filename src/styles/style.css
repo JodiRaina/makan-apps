@@ -178,10 +178,7 @@ main {
   color: white;
 }
 
-.restaurant-item
-  .restaurant-item__header
-  .restaurant-item__header__rating
-  .restaurant-item__header__rating__score {
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
   margin-left: 10px;
 }
 

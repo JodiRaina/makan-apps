@@ -37,7 +37,6 @@ const Detail = {
       const review = document.querySelector('#review').value;
       const data = {
         id: url.id,
-        date: new Date(),
         name,
         review,
       };
