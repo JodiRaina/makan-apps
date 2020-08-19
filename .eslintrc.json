@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": 0,
+    "no-underscore-dangle": [2, {
+      "allow": [],
+      "allowAfterThis": true
+    }],
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true
+    }],
+    "no-restricted-globals": ["error", "event", "fdescribe"],
+    "prettier/prettier": ["error"]
+  }
+}
