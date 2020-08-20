@@ -16,9 +16,16 @@ const Like = {
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
     const restaurantsContainer = document.querySelector('#restaurants');
+    console.log(restaurants);
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantsItemTemplate(restaurant);
     });
+    if (restaurants.length == 0) {
+      restaurantsContainer.innerHTML = `
+      <div class="no__restaurant">
+        <p>tidak ada restaurant yang favorite</p>
+      </div>`;
+    }
   },
 };
 

@@ -62,6 +62,7 @@ const createUnlikeRestaurantButtonTemplate = () => `
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
+
 export {
   createRestaurantsItemTemplate,
   createRestaurantDetailTemplate,
