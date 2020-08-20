@@ -4,7 +4,8 @@ import {
   createRestaurantDetailTemplate,
   createRestaurantsReviewTemplate,
 } from '../templates/template-creator';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 
 const Detail = {
   async render() {
@@ -46,8 +47,9 @@ const Detail = {
     reviews.forEach((review) => {
       restaurantReviewContainer.innerHTML += createRestaurantsReviewTemplate(review);
     });
-    await LikeButtonInitiator.init({
+    await LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      FavoriteRestaurants: FavoriteRestaurantIdb,
       restaurant: {
         id: restaurant.id,
         name: restaurant.name,
